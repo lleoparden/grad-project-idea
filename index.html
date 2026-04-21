@@ -1305,6 +1305,32 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
     <div>
       <h4>Locked vectors</h4>
       <p>When Model 2 can't fully understand the structure of an upload — too complex, too unusual, or containing patterns it hasn't been trained on — the vector uploads as locked. It's still usable, droppable onto the canvas, and exportable as-is. But it can't be broken apart. As the model improves with more training data, previously locked vectors can be re-evaluated and unlocked automatically.</p>
+      <div style="margin-top: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; background: #fff3e0; color: #b45309; border: 1px solid rgba(180,83,9,0.2); padding: 3px 10px; border-radius: 3px;">User-assisted decomposition</span>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 500; margin-bottom: 0.6rem;">Help the model unlock your vector</h4>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.7; font-weight: 300;">If a vector is locked but you still need its code, you can assist the model manually. The tool highlights the unrecognized regions and lets you fill each one by selecting a matching primitive from the app's built-in shape library — a circle, a bezier curve, a rectangle. Once you map the unknowns, the model has enough context to decompose the full vector, generate clean code for it, and mark it editable. Your mapping also gets used as new training data, making the model better for everyone going forward.</p>
+        <div style="margin-top: 1.25rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
+          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
+            <svg width="36" height="36" viewBox="0 0 36 36" style="display:block; margin: 0 auto 0.5rem;">
+              <path d="M8 28 C8 16 14 6 18 5 C22 6 28 16 28 28Z" fill="rgba(200,57,26,0.07)" stroke="#c8391a" stroke-width="1.2" stroke-dasharray="3,2"/>
+              <text x="18" y="21" text-anchor="middle" font-size="8" fill="#c8391a" font-family="IBM Plex Mono, monospace">?</text>
+            </svg>
+            <div style="font-size: 11px; color: var(--ink-3); font-family: 'IBM Plex Mono', monospace;">unknown region</div>
+          </div>
+          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-size: 18px; color: var(--ink-3);">→</div>
+            <div style="font-size: 11px; color: var(--ink-3); font-family: 'IBM Plex Mono', monospace; margin-top: 4px;">you select match</div>
+          </div>
+          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
+            <svg width="36" height="36" viewBox="0 0 36 36" style="display:block; margin: 0 auto 0.5rem;">
+              <path d="M8 28 C8 16 14 6 18 5 C22 6 28 16 28 28Z" fill="rgba(26,107,58,0.08)" stroke="#1a6b3a" stroke-width="1.2"/>
+            </svg>
+            <div style="font-size: 11px; color: #1a6b3a; font-family: 'IBM Plex Mono', monospace;">code unlocked</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
