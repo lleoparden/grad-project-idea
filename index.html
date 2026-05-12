@@ -462,105 +462,7 @@ h2.serif {
   text-orientation: mixed;
 }
 
-/* ─── ML MODELS ─── */
-.ml-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.ml-card {
-  background: var(--card);
-  border: var(--rule);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.ml-head {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 2rem;
-  border-bottom: var(--rule);
-  background: #fafafa;
-}
-.ml-index {
-  font-family: 'Fraunces', serif;
-  font-size: 42px;
-  line-height: 1;
-  color: #e8e8e8;
-  font-weight: 300;
-  letter-spacing: -0.04em;
-  width: 56px;
-}
-.ml-head-text h3 {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-.ml-head-text p {
-  font-size: 13px;
-  color: var(--ink-3);
-  font-weight: 300;
-}
-.ml-tag {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 3px;
-}
-.ml-tag.sc { background: var(--accent-light); color: var(--accent); border: 1px solid rgba(200,57,26,0.2); }
-.ml-tag.ai { background: var(--accent-2-light); color: var(--accent-2); border: 1px solid rgba(26,58,143,0.2); }
-.ml-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
-}
-.ml-body-col {
-  padding: 1.75rem 2rem;
-  border-right: var(--rule);
-}
-.ml-body-col:last-child { border-right: none; }
-.ml-body-col h4 {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  margin-bottom: 0.75rem;
-  font-family: 'IBM Plex Mono', monospace;
-}
-.ml-body-col p {
-  font-size: 13.5px;
-  color: var(--ink-2);
-  font-weight: 300;
-  line-height: 1.7;
-}
-.courses-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 0.25rem;
-}
-.courses-list li {
-  font-size: 12px;
-  color: var(--ink-3);
-  font-family: 'IBM Plex Mono', monospace;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.courses-list li::before {
-  content: '';
-  width: 4px; height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-
-/* ─── CS SECTION ─── */
+/* ─── CS CARDS ─── */
 .cs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -593,6 +495,116 @@ h2.serif {
   border: 1px solid rgba(26,58,143,0.15);
   padding: 3px 10px;
   border-radius: 3px;
+}
+
+/* ─── PIPELINE ─── */
+.pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--card);
+  border: var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.pipe-step {
+  flex: 1;
+  padding: 2rem 1.75rem;
+  border-right: var(--rule);
+}
+.pipe-step:last-child { border-right: none; }
+.pipe-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-3);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.08em;
+}
+.pipe-step h4 { font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; }
+.pipe-step p { font-size: 12.5px; color: var(--ink-2); font-weight: 300; line-height: 1.65; }
+
+/* ─── AI ASSISTANT ─── */
+.ai-card {
+  background: var(--card);
+  border: var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+.ai-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-bottom: var(--rule);
+  background: #fafafa;
+}
+.ai-index {
+  font-family: 'Fraunces', serif;
+  font-size: 42px;
+  line-height: 1;
+  color: #e8e8e8;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  width: 56px;
+}
+.ai-head-text h3 { font-size: 17px; font-weight: 500; margin-bottom: 3px; }
+.ai-head-text p { font-size: 13px; color: var(--ink-3); font-weight: 300; }
+.ai-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 3px;
+  background: var(--accent-2-light);
+  color: var(--accent-2);
+  border: 1px solid rgba(26,58,143,0.2);
+}
+.ai-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+.ai-body-col {
+  padding: 1.75rem 2rem;
+  border-right: var(--rule);
+}
+.ai-body-col:last-child { border-right: none; }
+.ai-body-col h4 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.ai-body-col p { font-size: 13.5px; color: var(--ink-2); font-weight: 300; line-height: 1.7; }
+.courses-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 0.25rem;
+}
+.courses-list li {
+  font-size: 12px;
+  color: var(--ink-3);
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.courses-list li::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  flex-shrink: 0;
 }
 
 /* ─── LIBRARY ─── */
@@ -638,83 +650,6 @@ h2.serif {
 .lib-explain h4 { font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; }
 .lib-explain p { font-size: 13.5px; color: var(--ink-2); font-weight: 300; line-height: 1.7; }
 
-/* ─── PIPELINE ─── */
-.pipeline {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  background: var(--card);
-  border: var(--rule);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-.pipe-step {
-  flex: 1;
-  padding: 2rem 1.75rem;
-  border-right: var(--rule);
-}
-.pipe-step:last-child { border-right: none; }
-.pipe-num {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  color: var(--ink-3);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.08em;
-}
-.pipe-step h4 { font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; }
-.pipe-step p { font-size: 12.5px; color: var(--ink-2); font-weight: 300; line-height: 1.65; }
-
-/* ─── TEAM OVERVIEW ─── */
-.team-overview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-.team-block {
-  background: var(--card);
-  border: var(--rule);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.team-head {
-  padding: 1.25rem 1.75rem;
-  border-bottom: var(--rule);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.team-head-title {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-.team-pill {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  padding: 3px 10px;
-  border-radius: 3px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.team-pill.cs { background: var(--accent-2-light); color: var(--accent-2); border: 1px solid rgba(26,58,143,0.2); }
-.team-pill.sc { background: var(--accent-light); color: var(--accent); border: 1px solid rgba(200,57,26,0.2); }
-.team-items {
-  padding: 0.5rem 0;
-}
-.team-item {
-  padding: 1.1rem 1.75rem;
-  border-bottom: var(--rule);
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.team-item:last-child { border-bottom: none; }
-.team-item h4 { font-size: 13.5px; font-weight: 500; margin-bottom: 4px; }
-.team-item p { font-size: 12.5px; color: var(--ink-2); font-weight: 300; line-height: 1.6; }
-.team-item .courses {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  margin-top: 8px;
-}
-.team-item .ctag { font-size: 10px; }
-
 /* ─── EXPORT ─── */
 .export-box {
   background: #0d0d0d;
@@ -752,6 +687,52 @@ h2.serif {
 }
 .export-code .kw{color:#e06c75;} .export-code .fn{color:#61afef;} .export-code .str{color:#98c379;} .export-code .tag{color:#e5c07b;} .export-code .attr{color:#d19a66;} .export-code .cm{color:#3a3a3a;font-style:italic;}
 
+/* ─── COURSE MAP ─── */
+.course-map {
+  background: var(--card);
+  border: var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.course-map-head {
+  padding: 1.25rem 2rem;
+  border-bottom: var(--rule);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.course-map-head span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.course-map-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: var(--rule);
+  align-items: stretch;
+}
+.course-map-row:last-child { border-bottom: none; }
+.course-name {
+  padding: 1rem 2rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-2);
+  border-right: var(--rule);
+  display: flex;
+  align-items: center;
+}
+.course-where {
+  padding: 1rem 2rem;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-weight: 300;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
 /* ─── FOOTER ─── */
 footer {
   border-top: var(--rule);
@@ -773,9 +754,7 @@ footer {
   margin-bottom: 0.75rem;
 }
 footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
-.footer-meta {
-  text-align: right;
-}
+.footer-meta { text-align: right; }
 .footer-meta p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
@@ -800,15 +779,17 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
   .nav-links { display: none; }
   .hero, section.blk, .mockup-wrap { padding-left: 1.25rem; padding-right: 1.25rem; }
   .hero h1 { font-size: clamp(40px, 12vw, 70px); }
-  .hero-columns, .problem-split, .app-tabs-explain, .team-overview, .cs-grid, .lib-explain { grid-template-columns: 1fr; }
+  .hero-columns, .problem-split, .app-tabs-explain, .cs-grid, .lib-explain { grid-template-columns: 1fr; }
   .mock-body { grid-template-columns: 1fr; }
   .code-pane { display: none; }
-  .ml-body { grid-template-columns: 1fr; }
+  .ai-body { grid-template-columns: 1fr; }
   .library-grid { grid-template-columns: repeat(2, 1fr); }
   .pipeline { flex-direction: column; }
   .pipe-step { border-right: none; border-bottom: var(--rule); }
   .pipe-step:last-child { border-bottom: none; }
   .splitview-explain { grid-template-columns: 1fr; }
+  .course-map-row { grid-template-columns: 1fr; }
+  .course-name { border-right: none; border-bottom: var(--rule); }
   .footer-meta { text-align: left; }
   footer { grid-template-columns: 1fr; }
 }
@@ -822,11 +803,11 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
   <ul class="nav-links">
     <a href="#problem">Problem</a>
     <a href="#tool">The Tool</a>
-    <a href="#intelligence">Intelligence Layer</a>
     <a href="#cs">CS Contribution</a>
+    <a href="#ai">AI Assistant</a>
     <a href="#library">Library</a>
     <a href="#export">Export</a>
-    <a href="#team">Team Split</a>
+    <a href="#courses">Course Map</a>
   </ul>
   <div class="nav-tag">Grad Project · 2026 / 2027</div>
 </nav>
@@ -835,15 +816,15 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
 <div class="hero">
   <div class="hero-meta">
     <div class="hero-type">Project Proposal</div>
-    <div class="hero-dept">CS × Scientific Computing — Joint Graduation Project</div>
+    <div class="hero-dept">Computer Science — Graduation Project</div>
   </div>
   <h1><em>Vectr</em><span>Draw vectors. Get React code.</span></h1>
 
   <div class="hero-columns">
     <div class="hero-desc">
-      <p>Vectr is a <strong>design-to-code tool</strong> that eliminates the gap between what a designer draws and what a developer can use. Every vector drawn on the canvas is simultaneously clean, readable, component-ready React and SVG code.</p>
-      <p>The tool has two tabs — a <strong>Design tab</strong> (a canvas like Illustrator) and a <strong>Code tab</strong> (live React output) — with an optional split view. An AI assistant lives inside, aware of the current code at all times.</p>
-      <p>Under the hood, <strong>two machine learning models</strong> clean the strokes as they're drawn and decompose complex shapes into named, reusable components. A third AI model helps developers understand and modify the generated code in plain language.</p>
+      <p>Vectr is a <strong>design-to-code tool</strong> that closes the gap between what a designer draws and what a developer can actually use. Every vector drawn on the canvas is simultaneously clean, readable, component-ready React and SVG code.</p>
+      <p>The tool has two tabs — a <strong>Design tab</strong> (a canvas like Illustrator) and a <strong>Code tab</strong> (live React output) — with an optional split view. An AI assistant lives inside the tool, always aware of the current code state, so developers can ask it questions or request changes in plain language.</p>
+      <p>This is a <strong>pure CS project</strong>. The canvas engine, the code generation pipeline, the architecture, the AI integration, the export system — all of it is built from the ground up and maps directly to the CS curriculum.</p>
     </div>
     <div class="hero-stats">
       <div class="stat-row">
@@ -855,12 +836,12 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
         <span class="stat-val">React / SVG</span>
       </div>
       <div class="stat-row">
-        <span class="stat-label">ML models</span>
-        <span class="stat-val">2 + AI assistant</span>
+        <span class="stat-label">AI</span>
+        <span class="stat-val">LLM assistant</span>
       </div>
       <div class="stat-row">
-        <span class="stat-label">teams</span>
-        <span class="stat-val">CS + SC</span>
+        <span class="stat-label">team</span>
+        <span class="stat-val">CS only</span>
       </div>
       <div class="stat-row">
         <span class="stat-label">year</span>
@@ -880,43 +861,33 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
     <div class="mock-tabs">
       <div class="tab on">Design</div>
       <div class="tab">Code</div>
-      <div class="split-hint">split view ⌥S</div>
+      <div class="split-hint">⌥S — split view</div>
     </div>
     <div class="mock-body">
       <div class="canvas-pane">
-        <span class="inline-label">ML MODEL 1 — cleaning in real time</span>
+        <div class="inline-label">live canvas</div>
         <div class="tools">
           <div class="tool-btn active">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M2 12L5.5 4.5L9.5 8.5L12 2" stroke="#c8391a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="12" cy="2" r="1.4" fill="#c8391a"/>
-              <circle cx="2" cy="12" r="1.4" fill="#c8391a"/>
+              <path d="M2 12L5 8L9 10L12 3" stroke="#c8391a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="tool-btn">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <rect x="2" y="2" width="10" height="10" rx="1.5" stroke="#bbb" stroke-width="1.3"/>
+              <rect x="2.5" y="2.5" width="9" height="9" rx="1" stroke="#999" stroke-width="1.2"/>
             </svg>
           </div>
           <div class="tool-btn">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <circle cx="7" cy="7" r="4.5" stroke="#bbb" stroke-width="1.3"/>
-            </svg>
-          </div>
-          <div class="tool-btn">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M7 1.5L12.5 12.5H1.5L7 1.5Z" stroke="#bbb" stroke-width="1.3" stroke-linejoin="round"/>
+              <circle cx="7" cy="7" r="4.5" stroke="#999" stroke-width="1.2"/>
             </svg>
           </div>
         </div>
-        <svg width="240" height="240" viewBox="0 0 240 240">
+        <svg width="200" height="220" viewBox="0 0 240 240">
           <path d="M50 190 C50 110 85 40 120 35 C155 40 190 110 190 190 Q160 205 120 200 Q80 205 50 190Z"
-                fill="rgba(200,57,26,0.07)" stroke="#c8391a" stroke-width="1.5"/>
-          <circle cx="50" cy="190" r="5" fill="#c8391a"/>
-          <circle cx="120" cy="35" r="5" fill="#c8391a"/>
-          <circle cx="190" cy="190" r="5" fill="#c8391a"/>
+            fill="rgba(200,57,26,0.06)" stroke="#c8391a" stroke-width="1.5"/>
           <line x1="50" y1="190" x2="50" y2="110" stroke="#c8391a" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
-          <line x1="120" y1="35" x2="148" y2="75" stroke="#c8391a" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
+          <line x1="85" y1="40" x2="148" y2="75" stroke="#c8391a" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
           <line x1="190" y1="190" x2="190" y2="110" stroke="#c8391a" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
           <circle cx="50" cy="110" r="4" fill="white" stroke="#c8391a" stroke-width="1.2"/>
           <circle cx="148" cy="75" r="4" fill="white" stroke="#c8391a" stroke-width="1.2"/>
@@ -924,11 +895,11 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
         </svg>
       </div>
       <div class="code-pane">
-        <div><span class="cm">// auto-generated · ML Model 2 decomposed this</span></div>
+        <div><span class="cm">// auto-generated · code pipeline</span></div>
         <br/>
         <div><span class="kw">import</span> React <span class="kw">from</span> <span class="str">'react'</span></div>
         <br/>
-        <div><span class="cm">// Shape decomposed into named primitives</span></div>
+        <div><span class="cm">// shape decomposed into named primitives</span></div>
         <div><span class="kw">const</span> <span class="fn">MainCurve</span> = ({ fill, stroke }) =&gt; (</div>
         <div>&nbsp;&nbsp;<span class="tag">&lt;path</span></div>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">d</span>=<span class="str">"M50 190 C50 110 85 40 120 35</span></div>
@@ -952,49 +923,49 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
 <section class="blk" id="problem">
   <div class="ey">01 — The Problem</div>
   <h2 class="serif">Design and code don't speak the same language</h2>
-  <p class="lead">When a designer draws a custom vector or complex shape, a developer has no good way to turn that into usable code. The design loses its soul in translation — and today's tools make this worse, not better.</p>
+  <p class="lead">When a designer draws a custom vector or complex shape, a developer has no good way to turn it into usable code. The design loses its soul in translation — and today's tools make this worse, not better.</p>
 
   <div class="problem-split">
     <div class="prob-card">
       <div class="who">The designer</div>
       <h3>Makes something beautiful</h3>
-      <p>Custom shapes, detailed paths, intricate illustrations — drawn with precision, built to be scalable, animatable, and alive. Illustrator, Figma, Sketch. They know exactly what they want and they produced it. The vector is perfect.</p>
+      <p>Custom shapes, detailed paths, intricate illustrations — drawn with precision, built to be scalable, animatable, and alive. They work in Illustrator or Figma. They know exactly what they want and they produced it. The vector is perfect.</p>
     </div>
     <div class="prob-card bad">
       <div class="who">The developer</div>
       <h3>Gets a PNG and guesses</h3>
-      <p>No scalability. No interactivity. No way to animate it, theme it, or respond to events. Alternatively they get a 400-line bloated SVG dump from Illustrator that nobody wants to touch — full of transform matrices and nested groups with no meaningful structure.</p>
+      <p>No scalability. No interactivity. No way to animate it, theme it, or respond to events. Or they get a 400-line SVG export from Illustrator that nobody wants to touch — full of transform matrices and meaningless auto-generated IDs with no component structure at all.</p>
     </div>
   </div>
 
   <div class="problem-bridge">
-    <div class="bridge-title">What actually happens today — and why it fails</div>
+    <div class="bridge-title">What happens today — and why it fails</div>
     <div class="bridge-row">
       <div class="bridge-icon">🖼</div>
       <div>
         <h4>Export as PNG</h4>
-        <p>Loses all scalability. Can't be animated. Can't change color without a new export. Not a living part of the codebase — just a dead image file.</p>
+        <p>Loses all scalability. Can't be animated or themed. Not a living part of the codebase — just a static image file that breaks on retina displays and can't respond to anything.</p>
       </div>
     </div>
     <div class="bridge-row">
       <div class="bridge-icon">📄</div>
       <div>
         <h4>Export SVG from Illustrator</h4>
-        <p>Produces hundreds of lines of unreadable, unstructured SVG. No component structure. Impossible to modify programmatically. Developers copy-paste it as a black box and pray.</p>
+        <p>Produces hundreds of lines of unreadable SVG. No component structure. Impossible to modify programmatically. Developers copy-paste it as a black box and nobody touches it again.</p>
       </div>
     </div>
     <div class="bridge-row">
       <div class="bridge-icon">🔁</div>
       <div>
-        <h4>Manual recreation by developer</h4>
-        <p>The developer hand-rewrites the shape in SVG or Canvas. Takes hours. Introduces discrepancies. Requires going back and forth with the designer. Not sustainable at scale.</p>
+        <h4>Developer hand-rewrites the shape</h4>
+        <p>Takes hours. Introduces discrepancies. Requires constant back-and-forth with the designer. The developer has to guess at bezier control handles from looking at a PNG. Not sustainable at any scale.</p>
       </div>
     </div>
     <div class="bridge-row">
       <div class="bridge-icon">✓</div>
       <div>
         <h4>Vectr's approach</h4>
-        <p>The vector <em>is</em> the code from the moment it's drawn. The designer doesn't touch code. The developer doesn't touch the canvas. Both see the same thing in their own language, in real time.</p>
+        <p>The vector <em>is</em> the code from the moment it's drawn. The designer works on the canvas. The developer works in the code tab. Both see the same thing in their own language, in real time, with no translation step in between.</p>
       </div>
     </div>
   </div>
@@ -1015,10 +986,9 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
       <div class="tab-card-body">
         <p>A canvas that feels like Illustrator. Designers work the way they already know how — draw, adjust, refine. No code knowledge required. The tool handles everything underneath.</p>
         <ul class="feat-list">
-          <li>Pen tool with bezier curve support and adjustable anchor points</li>
-          <li>Shape tools — rectangle, circle, polygon, freehand path</li>
+          <li>Pen tool with full bezier curve support — place anchor points, drag control handles, close paths, edit existing nodes</li>
+          <li>Shape tools — rectangle, circle, ellipse, polygon, freehand path</li>
           <li>Fill, stroke, opacity, layer management, grouping</li>
-          <li>Real-time stroke correction via ML Model 1 as you draw</li>
           <li>Pre-built vector library to drag and start from</li>
           <li>UI component primitives — buttons, navbars, inputs — editable on canvas</li>
           <li>Transform tools — scale, rotate, skew, flip, align</li>
@@ -1031,14 +1001,13 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
         <h3>Code Tab — live output</h3>
       </div>
       <div class="tab-card-body">
-        <p>Everything drawn on the canvas is reflected here instantly as clean, readable React and SVG. The code updates in the background whether or not you're looking at it. Developers can read it, copy from it, or let the AI work with it.</p>
+        <p>Everything drawn on the canvas is reflected here instantly as clean, readable React and SVG. The code updates in the background whether or not you're looking at it. Developers can read it, copy from it, or ask the AI assistant to work with it.</p>
         <ul class="feat-list">
           <li>React component output — named, structured, importable</li>
-          <li>Minimal SVG paths — not a coordinate dump</li>
-          <li>Shapes decomposed into named primitives via ML Model 2</li>
-          <li>Props passed cleanly — fill, stroke, size, className</li>
-          <li>Component hierarchy reflects visual grouping on canvas</li>
-          <li>Syntax highlighted, formatted, readable by a human</li>
+          <li>Each shape gets its own component with named props (fill, stroke, size, className)</li>
+          <li>Component hierarchy mirrors visual grouping on the canvas</li>
+          <li>Bezier paths become components with named variables for every anchor and control handle — not raw coordinate strings</li>
+          <li>Syntax highlighted, formatted, and readable by a human</li>
           <li>AI assistant panel inline — ask about any part of the code</li>
         </ul>
       </div>
@@ -1048,133 +1017,29 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
   <div class="splitview-explain">
     <div class="splitview-side">
       <h4>Design tab</h4>
-      <p>The canvas. Draw, edit, style. Fully functional. The ML models run silently as you work, cleaning strokes and decomposing shapes in the background. Neither you nor the designer needs to know they exist.</p>
+      <p>The canvas. Draw, edit, style. Fully functional. The code generation pipeline runs silently in the background — every canvas change updates the JSON state, which immediately re-runs the generator.</p>
     </div>
     <div class="splitview-divider">⌥S — split view</div>
     <div class="splitview-side">
       <h4>Code tab</h4>
-      <p>Live React and SVG. Clean, readable, component-ready. Updated continuously, even when you're not looking at it. Open split view and watch the code change as the designer moves anchor points in real time.</p>
+      <p>Live React and SVG. Clean, readable, component-ready. Updated continuously, even when you're not looking at it. Open split view and watch the code change in real time as the designer moves anchor points on the canvas.</p>
     </div>
-  </div>
-</section>
-
-<!-- INTELLIGENCE / SC -->
-<section class="blk" id="intelligence">
-  <div class="ey">03 — Intelligence Layer — SC Contribution</div>
-  <h2 class="serif">Two ML models, one AI assistant</h2>
-  <p class="lead">One model cleans what comes in. Another structures what goes out. An AI assistant helps the developer work with what's been generated. Together they form the scientific computing core of the tool.</p>
-
-  <div class="ml-section">
-
-    <div class="ml-card">
-      <div class="ml-head">
-        <div class="ml-index">01</div>
-        <div class="ml-head-text">
-          <h3>Stroke to Clean Path Model</h3>
-          <p>Runs in real time as the designer draws. Cleans raw freehand input into minimal, correct SVG paths.</p>
-        </div>
-        <div class="ml-tag sc">SC — Model 1</div>
-      </div>
-      <div class="ml-body">
-        <div class="ml-body-col">
-          <h4>What it does</h4>
-          <p>When a designer draws freehand, the raw input is messy — shaky lines, uneven curves, hundreds of redundant points from every pixel the mouse touched. This model takes that raw stroke data and outputs a clean, minimal SVG path in real time. Think of it as autocorrect for vectors — it smooths, simplifies, and corrects without the designer noticing anything changed.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>How it's trained</h4>
-          <p>Trained on paired datasets: raw hand-drawn stroke input on one side, the corresponding clean SVG path on the other. The model learns the mapping between the messy real-world input and the ideal vector output. It operates with low latency — it must run fast enough to feel instant as the designer draws, so inference speed is a core technical constraint.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>Courses covered</h4>
-          <ul class="courses-list">
-            <li>Machine Learning</li>
-            <li>Neural Networks & Deep Learning</li>
-            <li>Computational Geometry</li>
-            <li>Digital Signal Processing</li>
-            <li>High Performance Computing</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="ml-card">
-      <div class="ml-head">
-        <div class="ml-index">02</div>
-        <div class="ml-head-text">
-          <h3>Vector Shape Decomposition Model</h3>
-          <p>Analyzes completed vectors and breaks them into named primitive components — circles, bezier curves, straight lines.</p>
-        </div>
-        <div class="ml-tag sc">SC — Model 2</div>
-      </div>
-      <div class="ml-body">
-        <div class="ml-body-col">
-          <h4>What it does</h4>
-          <p>When a designer draws something complex — a logo, an icon, a detailed illustration — this model analyzes the full vector and classifies each segment: which parts are circles, which are bezier curves, which are straight lines, which are compound paths. Each decomposed part becomes a named, reusable piece in the generated React code. Instead of one giant unreadable SVG path, the output is structured and segmented.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>The library gatekeeper</h4>
-          <p>This model also acts as the gatekeeper for the shared library. When a designer uploads a finished vector, this model runs on it. If it can fully decompose the vector into understood primitives, it becomes <strong>editable</strong> in the library — anyone can drag it onto the canvas and modify individual parts. If it can't, the vector uploads as <strong>locked</strong> and usable as-is. The better the model gets over time, the more the library opens up.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>Courses covered</h4>
-          <ul class="courses-list">
-            <li>Computer Vision</li>
-            <li>Machine Learning</li>
-            <li>Computational Geometry</li>
-            <li>Neural Networks</li>
-            <li>High Performance Computing</li>
-            <li>Pattern Recognition</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="ml-card">
-      <div class="ml-head">
-        <div class="ml-index">AI</div>
-        <div class="ml-head-text">
-          <h3>Context-Aware AI Assistant</h3>
-          <p>Lives inside the tool with full awareness of the current code state. Developers talk to it in plain language.</p>
-        </div>
-        <div class="ml-tag ai">SC — AI Layer</div>
-      </div>
-      <div class="ml-body">
-        <div class="ml-body-col">
-          <h4>What it does</h4>
-          <p>The assistant is not a generic chatbot. It reads the live code panel at all times and responds specifically to what's on screen. A developer can ask it what a path does, ask it to make a shape responsive, restructure a path into a reusable component, or explain why a bezier curve is behaving unexpectedly. It understands SVG structure, React component anatomy, and design-to-code translation.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>Simulation before application</h4>
-          <p>Before applying any code change, the assistant simulates how the change would affect the rendered output and shows a diff. This connects to modeling and simulation — the assistant models the effect of its own suggestion before it makes it. The developer approves or rejects. Nothing is applied blindly. This makes it safe to use in a real project without reviewing every token it outputs.</p>
-        </div>
-        <div class="ml-body-col">
-          <h4>Courses covered</h4>
-          <ul class="courses-list">
-            <li>Natural Language Processing</li>
-            <li>Neural Networks</li>
-            <li>Modeling & Simulation</li>
-            <li>Computer & Network Security</li>
-            <li>Machine Learning</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- CS CONTRIBUTION -->
 <section class="blk" id="cs">
-  <div class="ey blue">04 — CS Contribution</div>
+  <div class="ey blue">03 — CS Contribution</div>
   <h2 class="serif">The engineering underneath</h2>
-  <p class="lead">The CS team builds the system that the ML models live inside — the canvas, the code generation pipeline, the architecture, and the export. This is where compiler theory, system design, and computer graphics come together.</p>
+  <p class="lead">Vectr is built entirely by the CS team. The canvas, the code generation pipeline, the architecture, the AI integration, and the export tool all map directly to core CS courses — not abstractly, but concretely.</p>
 
   <div class="cs-grid">
     <div class="cs-card">
       <div class="cs-card-num">CS — 01</div>
-      <h3>Canvas & Rendering Engine</h3>
-      <p>Building the design canvas itself — the pen tool, shape tools, bezier curve manipulation, anchor point handles, layers panel, selection, transformations. This is a core computer graphics and software engineering problem involving real-time rendering, complex event handling (mouse, touch, keyboard shortcuts), and managing a deep canvas state tree that the rest of the system reads from.</p>
-      <p>The canvas state is the single source of truth — every other part of the system (code generation, ML models, the assistant) reads from it. Getting this state model right is the most critical architectural decision in the CS contribution.</p>
+      <h3>Canvas &amp; Rendering Engine</h3>
+      <p>This is the entire design canvas — the pen tool, shape tools, bezier curve manipulation, anchor point handles, layers, selection, and transformations. It's built using Paper.js, a vector-native canvas library that gives us direct access to paths, curves, and scene graph management.</p>
+      <p>Every element on the canvas — a rectangle, a bezier path, a circle — has a live internal representation as structured data: anchor positions, control handle positions, fill color, stroke, opacity, z-index. This is the canvas state tree, and it's the single source of truth that every other part of the system reads from. Getting this right is the most critical architectural decision in the whole project.</p>
+      <p>Managing all user input events correctly (mouse, touch, keyboard shortcuts), redrawing efficiently on every frame, and handling selection, drag, and resize without visual glitches — this is a core computer graphics and real-time rendering problem.</p>
       <div class="course-tags">
         <span class="ctag">Computer Graphics</span>
         <span class="ctag">Software Engineering</span>
@@ -1185,36 +1050,38 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
     <div class="cs-card">
       <div class="cs-card-num">CS — 02</div>
       <h3>Code Generation Pipeline</h3>
-      <p>The system that takes the canvas state (stored as structured JSON) and converts it to clean React and SVG code in real time. This involves designing the data structures that represent each shape, the translation logic that converts each shape type to its corresponding React component, and ensuring the output is human-readable and well-organized — not just correct.</p>
-      <p>This is a compiler theory problem at its core. The visual language of the canvas is the source language. React code is the target. The pipeline is a compiler with a custom intermediate representation in between.</p>
+      <p>This is the core innovation of the project. At any given moment, the canvas state is a structured JSON object — a complete description of every shape and path with all their properties. The code generation pipeline reads that JSON and produces clean, readable React components in real time.</p>
+      <p>Think of this as a compiler where the <em>source language</em> is the visual canvas and the <em>target language</em> is React/JSX. Every shape type has its own generator function. A rectangle becomes a component with named variables for x, y, width, height, radius, fill, and opacity. A bezier path becomes a component where every anchor point and every control handle is a named variable — not a raw coordinate dump. The output is code a developer can actually read, understand, and modify.</p>
+      <p>The pipeline also handles grouping, nesting, naming conventions, and ordering consistently — which is an algorithms problem as much as it is a language design problem.</p>
       <div class="course-tags">
         <span class="ctag">Compiler Theory</span>
         <span class="ctag">Concepts of Programming Languages</span>
-        <span class="ctag">Analysis & Algorithms</span>
+        <span class="ctag">Analysis &amp; Algorithms</span>
       </div>
     </div>
 
     <div class="cs-card">
       <div class="cs-card-num">CS — 03</div>
-      <h3>Architecture & Infrastructure</h3>
-      <p>The overall system design — how the frontend, backend, database, autosave system, and real-time sync all connect and communicate. This includes designing the API layer that the frontend calls to save projects and retrieve the shared library, handling concurrent edits if multiple users are in the same workspace, and ensuring the system is resilient and performant under load.</p>
-      <p>Security matters: projects contain proprietary design work. User authentication, encrypted storage, and secure API communication are non-negotiable requirements, not afterthoughts.</p>
+      <h3>Architecture &amp; Infrastructure</h3>
+      <p>The full system design — how every part of the application connects and communicates. The frontend is React. The backend is Node.js, handling API requests, user authentication, project storage, and the autosave system. The database stores projects as JSON snapshots of the canvas state, which the frontend can reload and reconstruct exactly.</p>
+      <p>The autosave system triggers every 5 minutes and on every Ctrl+S. Because running a full code generation pass on every single keystroke would be too expensive, the save system is decoupled from the live code generation — generation runs continuously but saves are batched and queued.</p>
+      <p>Security is not optional: projects contain proprietary design work. User authentication, encrypted project storage, and a backend API key proxy (so the AI key is never exposed to the client) are hard requirements. The distributed side covers how the system handles multiple users accessing the shared library simultaneously without conflicts.</p>
       <div class="course-tags">
         <span class="ctag">Operating Systems</span>
         <span class="ctag">Computer Networks</span>
         <span class="ctag">Distributed Computing</span>
         <span class="ctag">Cybersecurity</span>
-        <span class="ctag">System Analysis & Design</span>
+        <span class="ctag">System Analysis &amp; Design</span>
       </div>
     </div>
 
     <div class="cs-card">
       <div class="cs-card-num">CS — 04</div>
-      <h3>Export Tool & Data Mining</h3>
-      <p>The export tool packages the generated React/SVG code into clean, self-contained component files — ready to drop into any project with a single import. This involves file system operations, code formatting, dependency resolution, and ensuring the exported file is always optimized and readable without any runtime dependency on Vectr itself.</p>
-      <p>The data mining layer analyzes usage patterns across the tool — what shapes designers draw most, how paths are structured, what the assistant gets asked — feeding training data back to the SC models and informing future feature decisions through pattern recognition.</p>
+      <h3>Export Tool &amp; Data Mining</h3>
+      <p>The export tool takes the generated React/SVG code and packages it into a clean, self-contained component file — formatted, named correctly, and ready to drop into any project with a single import. No cleanup. No runtime dependency on Vectr itself. This involves file system operations, code formatting, dependency resolution, and ensuring the output is always optimized and human-readable.</p>
+      <p>The data mining layer tracks usage patterns across the tool — which shapes get drawn most, how paths are typically structured, what users ask the AI assistant most often. This feeds directly into training data improvement and informs future feature decisions. Pattern recognition identifies recurring shape types and helps surface the most useful vectors in the shared library.</p>
       <div class="course-tags">
-        <span class="ctag">Analysis & Algorithms</span>
+        <span class="ctag">Analysis &amp; Algorithms</span>
         <span class="ctag">Data Mining</span>
         <span class="ctag">Pattern Recognition</span>
         <span class="ctag">Software Engineering</span>
@@ -1222,32 +1089,70 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
     </div>
   </div>
 
-  <br/>
   <div class="pipeline">
     <div class="pipe-step">
       <div class="pipe-num">INPUT</div>
       <h4>Canvas interaction</h4>
-      <p>Designer draws on canvas. Mouse/touch events captured. Raw stroke data collected frame by frame.</p>
+      <p>Designer draws on canvas. Mouse/touch events captured. Paths built from anchor points and bezier handles in real time.</p>
     </div>
     <div class="pipe-step">
-      <div class="pipe-num">ML MODEL 1</div>
-      <h4>Stroke cleaning</h4>
-      <p>Raw points sent to Model 1. Clean minimal SVG path returned in real time. Canvas updates immediately.</p>
-    </div>
-    <div class="pipe-step">
-      <div class="pipe-num">STATE UPDATE</div>
+      <div class="pipe-num">STATE</div>
       <h4>Canvas JSON</h4>
-      <p>Canvas state tree updated with clean path. Structured JSON representation of all shapes on canvas.</p>
+      <p>Every change updates the canvas state tree. A complete structured JSON description of all shapes, layers, and properties on the canvas.</p>
     </div>
     <div class="pipe-step">
-      <div class="pipe-num">ML MODEL 2</div>
-      <h4>Shape decomposition</h4>
-      <p>Complex shapes analyzed. Primitives identified and named. Output structured as component hierarchy.</p>
+      <div class="pipe-num">COMPILE</div>
+      <h4>Code generator</h4>
+      <p>The code generation pipeline reads the JSON. Each shape type maps to a generator function. Output is clean, named React components.</p>
     </div>
     <div class="pipe-step">
       <div class="pipe-num">OUTPUT</div>
       <h4>React / SVG code</h4>
-      <p>Code generation pipeline converts JSON to clean React. Code tab updates. Assistant reads the new state.</p>
+      <p>Code tab updates in real time. Every anchor point is a named variable. Every shape is a readable, importable component.</p>
+    </div>
+    <div class="pipe-step">
+      <div class="pipe-num">AI</div>
+      <h4>Assistant reads state</h4>
+      <p>The AI assistant always receives the current component code as context. Developers ask questions or request changes in plain language.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="blk" id="ai">
+  <div class="ey blue">04 — AI Assistant</div>
+  <h2 class="serif">A developer-facing AI that knows what's on screen</h2>
+  <p class="lead">The AI assistant is not a generic chatbot dropped into the sidebar. It's specifically integrated into the code state and responds to exactly what's currently on screen — giving developers a natural language interface to the generated code.</p>
+
+  <div class="ai-card">
+    <div class="ai-head">
+      <div class="ai-index">AI</div>
+      <div class="ai-head-text">
+        <h3>Context-Aware Code Assistant</h3>
+        <p>Lives inside the tool. Reads the live code panel on every message. Understands SVG structure, React anatomy, and the naming conventions the code generator produces.</p>
+      </div>
+      <div class="ai-tag">CS — NLP / Neural Networks</div>
+    </div>
+    <div class="ai-body">
+      <div class="ai-body-col">
+        <h4>What it does</h4>
+        <p>With every message, the assistant receives the full current component code as context. It's not a generic chatbot — it's specifically prompted to understand SVG structure, React component anatomy, and the naming conventions the code generator produces.</p>
+        <p>A developer can ask it what a control point does, ask it to make a shape responsive, turn a path into a reusable component with props, or animate a variable using Framer Motion. The assistant always knows exactly what's on screen.</p>
+      </div>
+      <div class="ai-body-col">
+        <h4>How the integration works</h4>
+        <p>The live code state is injected into every API call as a system context. The response is parsed and rendered in the assistant panel. When the assistant suggests a code change, the suggested diff is shown to the developer for review — nothing is applied without confirmation.</p>
+        <p>The AI API key lives on the backend and is never exposed to the client. All requests are proxied through the Node.js server, which also handles rate limiting and request logging.</p>
+      </div>
+      <div class="ai-body-col">
+        <h4>Courses covered</h4>
+        <ul class="courses-list">
+          <li>Natural Language Processing</li>
+          <li>Neural Networks &amp; Deep Learning</li>
+          <li>Software Engineering</li>
+          <li>Computer &amp; Network Security</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -1255,8 +1160,8 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
 <!-- LIBRARY -->
 <section class="blk" id="library">
   <div class="ey">05 — The Vector Library</div>
-  <h2 class="serif">A shared library that gets smarter over time</h2>
-  <p class="lead">Designers can upload finished vectors to a shared library that the whole team can use. The Shape Decomposition model runs on each upload — determining whether the vector becomes editable or stays locked, and improving that split as it improves.</p>
+  <h2 class="serif">A shared library your team builds over time</h2>
+  <p class="lead">Designers can upload finished vectors to a shared library that the whole team can drag onto any canvas and start from. Each library item stores both the canvas JSON and the generated code — so everything is re-editable, not just a static file.</p>
 
   <div class="library-grid">
     <div class="lib-item">
@@ -1264,6 +1169,13 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
         <path d="M10 50 C10 25 25 8 30 8 C35 8 50 25 50 50Z" fill="rgba(200,57,26,0.07)" stroke="#c8391a" stroke-width="1.2"/>
       </svg>
       <span class="lib-label">blob-01</span>
+      <span class="lib-badge editable">editable</span>
+    </div>
+    <div class="lib-item">
+      <svg width="60" height="60" viewBox="0 0 60 60">
+        <path d="M30 8 L35 25 L52 25 L38 35 L43 52 L30 42 L17 52 L22 35 L8 25 L25 25 Z" fill="rgba(26,58,143,0.07)" stroke="#1a3a8f" stroke-width="1.2"/>
+      </svg>
+      <span class="lib-label">star-04</span>
       <span class="lib-badge editable">editable</span>
     </div>
     <div class="lib-item">
@@ -1288,48 +1200,22 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
       <span class="lib-label">poly-03</span>
       <span class="lib-badge editable">editable</span>
     </div>
-    <div class="lib-item">
-      <svg width="60" height="60" viewBox="0 0 60 60">
-        <path d="M8 52 C8 20 20 5 30 8 C22 18 18 35 20 52Z M52 52 C52 20 40 5 30 8 C38 18 42 35 40 52Z" fill="#f1f1f1" stroke="#aaa" stroke-width="1.2"/>
-      </svg>
-      <span class="lib-label">complex-14</span>
-      <span class="lib-badge locked">locked</span>
-    </div>
   </div>
 
   <div class="lib-explain">
     <div>
-      <h4>Editable vectors</h4>
-      <p>When Model 2 can fully decompose an uploaded vector into understood primitives, it becomes editable in the library. Anyone can drag it onto the canvas, click into it, and modify individual sub-components — a circle's radius, a bezier curve's handle, a line's weight. Each part is a named, selectable React component.</p>
+      <h4>How library items work</h4>
+      <p>When a designer uploads a finished vector, two things get stored: the canvas JSON (a complete structured description of every anchor point, curve, and property) and the generated React code. Either can be loaded back independently.</p>
+      <p>When someone pulls a library item onto the canvas, the tool reconstructs the full editable vector from the stored JSON — all the anchor points come back, the bezier handles are live, and the code panel updates immediately to match. It's not a static import; it's a full reconstruction.</p>
     </div>
     <div>
-      <h4>Locked vectors</h4>
-      <p>When Model 2 can't fully understand the structure of an upload — too complex, too unusual, or containing patterns it hasn't been trained on — the vector uploads as locked. It's still usable, droppable onto the canvas, and exportable as-is. But it can't be broken apart. As the model improves with more training data, previously locked vectors can be re-evaluated and unlocked automatically.</p>
-      <div style="margin-top: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem;">
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; background: #fff3e0; color: #b45309; border: 1px solid rgba(180,83,9,0.2); padding: 3px 10px; border-radius: 3px;">User-assisted decomposition</span>
-        </div>
-        <h4 style="font-size: 14px; font-weight: 500; margin-bottom: 0.6rem;">Help the model unlock your vector</h4>
-        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.7; font-weight: 300;">If a vector is locked but you still need its code, you can assist the model manually. The tool highlights the unrecognized regions and lets you fill each one by selecting a matching primitive from the app's built-in shape library — a circle, a bezier curve, a rectangle. Once you map the unknowns, the model has enough context to decompose the full vector, generate clean code for it, and mark it editable. Your mapping also gets used as new training data, making the model better for everyone going forward.</p>
-        <div style="margin-top: 1.25rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
-          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
-            <svg width="36" height="36" viewBox="0 0 36 36" style="display:block; margin: 0 auto 0.5rem;">
-              <path d="M8 28 C8 16 14 6 18 5 C22 6 28 16 28 28Z" fill="rgba(200,57,26,0.07)" stroke="#c8391a" stroke-width="1.2" stroke-dasharray="3,2"/>
-              <text x="18" y="21" text-anchor="middle" font-size="8" fill="#c8391a" font-family="IBM Plex Mono, monospace">?</text>
-            </svg>
-            <div style="font-size: 11px; color: var(--ink-3); font-family: 'IBM Plex Mono', monospace;">unknown region</div>
-          </div>
-          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="font-size: 18px; color: var(--ink-3);">→</div>
-            <div style="font-size: 11px; color: var(--ink-3); font-family: 'IBM Plex Mono', monospace; margin-top: 4px;">you select match</div>
-          </div>
-          <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
-            <svg width="36" height="36" viewBox="0 0 36 36" style="display:block; margin: 0 auto 0.5rem;">
-              <path d="M8 28 C8 16 14 6 18 5 C22 6 28 16 28 28Z" fill="rgba(26,107,58,0.08)" stroke="#1a6b3a" stroke-width="1.2"/>
-            </svg>
-            <div style="font-size: 11px; color: #1a6b3a; font-family: 'IBM Plex Mono', monospace;">code unlocked</div>
-          </div>
-        </div>
+      <h4>Building the library over time</h4>
+      <p>The shared library grows as the team uploads their best components and vectors. Frequently used shapes — a brand icon, a recurring UI element, a complex illustration that took hours to get right — get stored once and reused everywhere.</p>
+      <p>The data mining system tracks which library items get pulled onto the canvas most, which ones get modified immediately after being dragged in, and which ones get exported directly. Over time this creates a clear picture of what's actually useful, which feeds back into how the library is organized and surfaced.</p>
+      <div class="course-tags" style="margin-top: 1rem;">
+        <span class="ctag">Analysis &amp; Algorithms</span>
+        <span class="ctag">System Analysis &amp; Design</span>
+        <span class="ctag">Data Mining</span>
       </div>
     </div>
   </div>
@@ -1339,7 +1225,7 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
 <section class="blk" id="export">
   <div class="ey blue">06 — Export</div>
   <h2 class="serif">Drop it into any project</h2>
-  <p class="lead">When the design is done, the developer exports the generated code as a clean React component file — self-contained, dependency-free, ready to import. No copy-pasting from a code tab. No cleaning up exports. It just works.</p>
+  <p class="lead">When the design is done, the developer exports the generated code as a clean React component file — self-contained, dependency-free, ready to import. No copy-pasting. No cleanup. No post-processing. It just works in any React project.</p>
 
   <div class="export-box">
     <div class="export-bar">
@@ -1370,64 +1256,72 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
   </div>
 </section>
 
-<!-- TEAM SPLIT -->
-<section class="blk" id="team">
-  <div class="ey">07 — Team Split</div>
-  <h2 class="serif">Built across two departments</h2>
-  <p class="lead">Vectr is a joint graduation project between Computer Science and Scientific Computing. The split is not arbitrary — each team contributes what their curriculum specifically prepares them for, and the two sides depend on each other to function.</p>
+<!-- COURSE MAP -->
+<section class="blk" id="courses">
+  <div class="ey">07 — Course Map</div>
+  <h2 class="serif">Every course, where it shows up</h2>
+  <p class="lead">This is not a list of loosely related courses. Each one maps to a specific, concrete part of the build — the exact problem the course covers is the exact problem we're solving.</p>
 
-  <div class="team-overview">
-    <div class="team-block">
-      <div class="team-head">
-        <div class="team-head-title">Computer Science</div>
-        <div class="team-pill cs">CS</div>
-      </div>
-      <div class="team-items">
-        <div class="team-item">
-          <h4>Canvas & Rendering Engine</h4>
-          <p>Pen tool, shape tools, bezier curves, anchor points, layers, real-time rendering, canvas state tree.</p>
-          <div class="courses"><span class="ctag">Computer Graphics</span><span class="ctag">Software Engineering</span></div>
-        </div>
-        <div class="team-item">
-          <h4>Code Generation Pipeline</h4>
-          <p>Canvas state JSON → clean React/SVG. A compiler with a visual language as input and React as output.</p>
-          <div class="courses"><span class="ctag">Compiler Theory</span><span class="ctag">Concepts of Programming Languages</span></div>
-        </div>
-        <div class="team-item">
-          <h4>Architecture & Infrastructure</h4>
-          <p>Frontend, backend, database, autosave, real-time sync, security, distributed system design.</p>
-          <div class="courses"><span class="ctag">OS</span><span class="ctag">Networks</span><span class="ctag">Distributed Computing</span><span class="ctag">Cybersecurity</span></div>
-        </div>
-        <div class="team-item">
-          <h4>Export Tool & Data Mining</h4>
-          <p>Clean component file packaging. Usage pattern analysis feeding training data back to SC models.</p>
-          <div class="courses"><span class="ctag">Analysis & Algorithms</span><span class="ctag">Data Mining</span></div>
-        </div>
-      </div>
+  <div class="course-map">
+    <div class="course-map-head">
+      <span>Course</span>
+      <span>Where it shows up in Vectr</span>
     </div>
-
-    <div class="team-block">
-      <div class="team-head">
-        <div class="team-head-title">Scientific Computing</div>
-        <div class="team-pill sc">SC</div>
-      </div>
-      <div class="team-items">
-        <div class="team-item">
-          <h4>Stroke to Clean Path Model</h4>
-          <p>ML model trained on raw vs clean SVG pairs. Runs in real time as the designer draws. Low-latency inference is a core constraint.</p>
-          <div class="courses"><span class="ctag">Machine Learning</span><span class="ctag">Neural Networks</span><span class="ctag">Computational Geometry</span><span class="ctag">DSP</span></div>
-        </div>
-        <div class="team-item">
-          <h4>Vector Shape Decomposition Model</h4>
-          <p>Classifies and segments complex vectors into named primitives. Library gatekeeper — editable vs locked. Computer vision + ML classification.</p>
-          <div class="courses"><span class="ctag">Computer Vision</span><span class="ctag">ML</span><span class="ctag">HPC</span><span class="ctag">Pattern Recognition</span></div>
-        </div>
-        <div class="team-item">
-          <h4>AI Assistant</h4>
-          <p>Context-aware, reads live code. Understands SVG and React anatomy. Simulates changes before applying. NLP + modeling and simulation.</p>
-          <div class="courses"><span class="ctag">NLP</span><span class="ctag">Neural Networks</span><span class="ctag">Modeling & Simulation</span></div>
-        </div>
-      </div>
+    <div class="course-map-row">
+      <div class="course-name">Computer Graphics</div>
+      <div class="course-where">The entire canvas engine — rendering shapes in real time, managing the scene graph, bezier curve mathematics, anchor point handles, z-index and layering.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Compiler Theory</div>
+      <div class="course-where">The code generation pipeline is a compiler. The visual canvas is the source language. React/JSX is the target. The canvas JSON is the intermediate representation. We write the whole thing from scratch.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Concepts of Programming Languages</div>
+      <div class="course-where">How we design the output code — how components are named, structured, and typed. How props are declared and passed. The decisions that make the generated code readable and idiomatic rather than just correct.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Analysis &amp; Algorithms</div>
+      <div class="course-where">Code generator efficiency (paths with hundreds of points need to generate fast), path simplification (reducing redundant anchor points without losing shape fidelity), and naming logic for components in complex grouped hierarchies.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Natural Language Processing</div>
+      <div class="course-where">The AI assistant — understanding what a developer is asking for in plain language, matching intent to the right code transformation, and parsing ambiguous requests into precise actions.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Neural Networks &amp; Deep Learning</div>
+      <div class="course-where">The language model powering the AI assistant. Understanding how transformer models work, how prompting affects output, and how to integrate an LLM API cleanly into a production application.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Software Engineering</div>
+      <div class="course-where">Overall architecture, component design, API design, testing strategy, version control workflow. The discipline that ties every other piece together into a shippable system.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">System Analysis &amp; Design</div>
+      <div class="course-where">Planning the full system before building it — data flow diagrams, entity relationships, API contracts, and the decisions made before writing a single line of code.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Operating Systems</div>
+      <div class="course-where">Backend process management, the autosave system (background writes, file handles, process queues), and understanding how the Node.js runtime manages concurrent operations.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Computer Networks</div>
+      <div class="course-where">Frontend-to-backend API communication, real-time sync between design and code panels, WebSocket connections, and understanding latency constraints in interactive tools.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Distributed Computing</div>
+      <div class="course-where">The shared library — multiple users reading and writing to the same library simultaneously without conflicts. Consistency, concurrency, and conflict resolution at the data layer.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Cybersecurity</div>
+      <div class="course-where">Authenticated project access, encrypted storage of proprietary design work, AI API key protection on the backend (never exposed to the client), and secure user data handling.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Data Mining</div>
+      <div class="course-where">Usage pattern analysis — which shapes get drawn most, which library items get reused, what developers ask the assistant — feeding insights back into the product and training data.</div>
+    </div>
+    <div class="course-map-row">
+      <div class="course-name">Pattern Recognition</div>
+      <div class="course-where">Identifying recurring shape types across projects and grouping structurally similar components in the shared library so the most relevant items surface first.</div>
     </div>
   </div>
 </section>
@@ -1440,7 +1334,7 @@ footer p { font-size: 14px; color: var(--ink-3); font-weight: 300; }
   </div>
   <div class="footer-meta">
     <p>Graduation Project — 2026 / 2027</p>
-    <p>CS × Scientific Computing</p>
+    <p>Computer Science</p>
     <p>vectr.app</p>
   </div>
 </footer>
